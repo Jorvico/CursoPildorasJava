@@ -1,31 +1,45 @@
 package com.jorge.poo;
 
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
 public class MainVehiculo {
 
 	public static void main(String[] args) {
 		
-		Vehiculo miVehiculo = new Vehiculo(3);
+		Vehiculo miVehiculo = new Vehiculo(4);
 		
-		String color = miVehiculo.getColor();
-
-		System.out.println(color);
-		miVehiculo.setColor("Blanco");
-		
-		color = miVehiculo.getColor();
-		System.out.println(color);
+		miVehiculo.setColor("amarillo");
+		System.out.println(miVehiculo.getColor());
 		
 		Vehiculo miVehiculo2 = new Vehiculo(4);
 		
-		miVehiculo2.setColor("Rojo");
+		miVehiculo.setColor("rojo");
+		miVehiculo2.setExtra(true, true, true);
+		
 		System.out.println(miVehiculo2.getColor());
+		System.out.println(miVehiculo2.getExtra());
 		
 		Vehiculo moto1 = new Vehiculo(2);
 		
+		System.out.println(miVehiculo.getDatosVehiculo());
 		System.out.println(moto1.getDatosVehiculo());
+		
+		Vehiculo miMoto2 = new Vehiculo(2, 1, 0.3, 200);
+		miMoto2.setColor("gris");
+		
+		Vehiculo miCamion = new Vehiculo(6, 3, 1.5, 3500);
+		
+		miCamion.setColor("Azul");
+		
+		miCamion.setExtra(true, true, false);
+		
+		System.out.println(miMoto2.getDatosVehiculo());
+		System.out.println(miCamion.getDatosVehiculo());
+		System.out.println(miCamion.getExtra());
+		
+		
+		
+		
+		
 		
 	}
 

@@ -6,7 +6,7 @@ public class Vehiculo {
 	private int ruedas;
 	private String color;
 	private int largo;
-	private int ancho;
+	private double ancho;
 	private int peso;
 	private boolean climatizador;
 	private boolean tapiceriaCuero;
@@ -14,13 +14,24 @@ public class Vehiculo {
 	
 	
 	//Constructor de la clase
+	//Sobrecarga de constructores
 	public Vehiculo(int ruedas) {
 		
 		//Atributos iniciales al construir un objeto
-		this.ruedas = 7;
+		this.ruedas = ruedas;
 		largo = 2;
 		ancho=1;
 		peso=2;
+		color="sin color";
+	}
+	
+public Vehiculo(int ruedas, int largo, double ancho, int peso) {
+		
+		//Atributos iniciales al construir un objeto
+		this.ruedas = ruedas;
+		this.largo = largo;
+		this.ancho = ancho;
+		this.peso=2;
 		color="sin color";
 	}
 	
@@ -31,11 +42,7 @@ public class Vehiculo {
 	public void setExtra(boolean climatizador) {
 		this.climatizador = climatizador;
 	}
-	
-	public void setExtra(boolean climatizador, boolean tapiceriaCuero) {
-		this.climatizador = climatizador;
-		this.tapiceriaCuero = tapiceriaCuero;
-	}
+
 	
 	public void setExtra(boolean climatizador, boolean tapiceriaCuero, boolean gps) {
 		this.climatizador = climatizador;
@@ -43,9 +50,17 @@ public class Vehiculo {
 		this.gps = gps;
 	}
 	
-	/*
-	 * public String getExtra() {}
-	 */
+	
+	public String getExtra() {
+		if(climatizador && tapiceriaCuero == false && gps == false) {
+			return "Tu vehiculo lleva el pack 1 de extras";
+		}else if(climatizador && tapiceriaCuero && gps) {
+			return "Tu vehiculo lleva el pack 2 de extras";
+		}else {}
+		return "La combinacion escogida no se admite";
+		
+	}
+	 
 		
 
 	

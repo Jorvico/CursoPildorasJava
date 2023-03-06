@@ -12,7 +12,7 @@ public class MainEjercicio2 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Ingrese el numero de sucursal: \n1. Soacha \n2. Bogota \n3. Melgar)");
+		System.out.println("Ingrese el numero de sucursal: \n1. Soacha \n2. Bogota \n3. Melgar");
 		numeroSucursal = sc.nextInt();
 		sc.nextLine();
 		System.out.println("Ingrese la direccion de envio");
